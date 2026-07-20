@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFF8F6; /* Cream White */
+  --foreground: #5C0013; /* Dark Burgundy */
+}
+
+@theme {
+  --color-burgundy: #800020;
+  --color-burgundy-dark: #5C0013;
+  --color-cream-white: #FFF8F6;
+  --color-soft-rose: #F8E8EC;
+  --color-gold: #D4AF37;
+
+  --font-great-vibes: var(--font-great-vibes);
+  --font-poppins: var(--font-poppins);
+}
+
+body {
+  background: linear-gradient(135deg, #FFF8F6 0%, #F8E8EC 50%, #FFF8F6 100%);
+  color: #5C0013;
+  font-family: var(--font-poppins), sans-serif;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.glass-card {
+  background: rgba(255, 248, 246, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 40px -10px rgba(128, 0, 32, 0.15),
+              0 0 1px 1px rgba(255, 255, 255, 0.3) inset;
+}
+
+.gold-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+  animation: gold-pulse 2.5s infinite ease-in-out alternate;
+}
+
+@keyframes gold-pulse {
+  0% {
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3), 0 0 0px rgba(212, 175, 55, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.6), 0 0 10px rgba(212, 175, 55, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3), 0 0 0px rgba(212, 175, 55, 0);
+  }
+}
+
